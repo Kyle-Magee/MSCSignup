@@ -35,11 +35,19 @@ function visit_them() {
 function leave_them() {
     var target_row = document.getElementById(event.target.id + 'row');
     target_row.setAttribute('style', 'background-color: green');
+    setTimeout(delete_row, 10000, target_row.rowIndex)
+
 }
 
 function gen_button(name, action, direction) {
     return '<button onclick="' + action + '()" id="' + name +'">Check ' + direction + '</button>' 
 }
+
+function delete_row(index) {
+    var table = document.getElementById('student_table');
+    table.deleteRow(index)
+}
+
 
 
 var dropdown = `<select name='tutors'>
