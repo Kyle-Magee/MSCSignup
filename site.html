@@ -2,25 +2,49 @@
 <head>
     <script src='site.js'></script>
     <style src='site.css'></style>
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<form action='' id='info'>
-    Name: <input type="text" id='name'>
-    Math Level: <select name='level'>
-        <option value='50'>50</option>
-        <option value='40'>40</option>
-        <option value='130'>130</option>
-        <option value='140'>140</option>
-        </select>
-    Table:<select name='table_number'>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        </select>
-</form>
-<button onclick='add()'>Sign Up</button>
-<br>
-<table id='student_table'>
+
+
+<div class='jumbotron text-center'>
+    <h1>Math Success Center</h1>
+</div>
+<div class='col-sm-4'>
+    <form action='' id='info'>
+            Name: <input type="text" class='form-control' id='name'>
+
+        Math Level: <select name='level' class='form-control'>
+            <option value='84'>84</option>
+            <option value='80'>80</option>
+            <option value='70'>70</option>
+            <option value='60'>60</option>
+            <option value='50'>50</option>
+            <option value='47'>47</option>
+            <option value='45'>45</option>
+            <option value='40'>40</option>
+            <option value='37'>37</option>
+            <option value='36'>36</option>
+            <option value='130'>130</option>
+            <option value='120'>120</option>
+            <option value='110'>110</option>
+            <option value='815'>815</option>
+            <option value='805'>805</option>
+            <option value='STATS'>STATS</option>
+            <option value='ELEC1'>ELEC1</option>
+            <option value='Other'>Other</option>
+            </select>
+        Table:<select name='table_number' class='form-control'>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            </select>
+    </form>
+            <br>
+            <center><button  type='button' class='btn btn-danger' onclick='add()'>Sign Up</button></center>
+</div>
+<div class='col-sm-8'>
+<table id='student_table' class='table'>
     <tr>
         <td>Name</td>
         <td>Math Level</td>
@@ -30,5 +54,7 @@
         <td>Time Seen</td>
         <td>Check In</td>
         <td>Check Out</td>
+        <td>Time Done</td>
     </tr>
 </table>
+</div>

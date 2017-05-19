@@ -2,7 +2,7 @@ var signup_button = document.getElementById('signup');
 function add() {
     var new_student = document.getElementById('info');
     var table = document.getElementById('student_table');
-    var row = table.insertRow(1);
+    var row = table.insertRow(table.rows.length);
     var name = row.insertCell(0);
     var mathlvl = row.insertCell(1);
     var table_sitting = row.insertCell(2);
@@ -11,6 +11,7 @@ function add() {
     var time_seen = row.insertCell(5);
     var check_in = row.insertCell(6);
     var check_out = row.insertCell(7);
+    var time_done = row.insertCell(8);
     name.innerHTML = info.name.value;
     row.id = info.name.value + 'row';
     mathlvl.innerHTML = info.level.value;
@@ -35,6 +36,8 @@ function visit_them() {
 function leave_them() {
     var target_row = document.getElementById(event.target.id + 'row');
     target_row.setAttribute('style', 'background-color: green');
+    var cur_time = new Date();
+    target_row.cells[8].innerHTML = cur_time.getHours() + ':' + cur_time.getMinutes();
     setTimeout(delete_row, 10000, target_row.rowIndex)
 
 }
