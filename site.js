@@ -35,7 +35,7 @@ function visit_them() {
 
 function leave_them() {
     var target_row = document.getElementById(event.target.id + 'row');
-    target_row.setAttribute('style', 'background-color: green');
+    target_row.setAttribute('style', 'background-color: forestgreen');
     var cur_time = new Date();
     target_row.cells[8].innerHTML = cur_time.getHours() + ':' + cur_time.getMinutes();
     setTimeout(delete_row, 10000, target_row.rowIndex)
@@ -57,6 +57,7 @@ var dropdown = `<select name='tutors'>
                     <option value='nyger'>Nyger</option>
                     <option value='rebecca'>Rebecca</option>
                     <option value='christopher'>Christopher</option>
+                    <option selected='selected'></option>
                 </select>`;
 
 var check_in_button = `<button onclick='visit_them()'>Check In</button>`;
